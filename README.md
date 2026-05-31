@@ -84,7 +84,20 @@ database = grasp_bunny
 
 ## データベース作成
 
-SQL ファイルは番号順に実行します。
+基本的には MySQL Workbench を使って SQL ファイルを実行します。
+
+Workbench で MySQL サーバーに接続し、次の SQL ファイルを番号順に開いて実行してください。
+
+```text
+sql/00_create_db.sql
+sql/01_create_table.sql
+sql/02_insert_bunny_2_object.sql
+sql/03_insert_bunny_arrangement.sql
+```
+
+Workbench では、各ファイルを開いて雷アイコン、または `Ctrl + Shift + Enter` でスクリプト全体を実行できます。
+
+コマンドラインで実行する場合は、次のように実行します。
 
 ```powershell
 mysql -u root -p < sql\00_create_db.sql
