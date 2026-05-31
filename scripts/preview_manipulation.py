@@ -13,7 +13,7 @@ DB_CONFIG = {
     "host": "localhost",
     "user": "root",
     "password": "041512",
-    "database": "db_sys_work_5",
+    "database": "grasp_bunny",
 }
 
 

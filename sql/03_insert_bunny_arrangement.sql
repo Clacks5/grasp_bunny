@@ -1,4 +1,4 @@
-USE db_sys_work_5;
+USE grasp_bunny;
 
 INSERT IGNORE INTO translation_xy (x, y) VALUES
     (-0.20, -0.20),
