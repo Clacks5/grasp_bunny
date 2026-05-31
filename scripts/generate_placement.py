@@ -2,13 +2,7 @@ import io
 import numpy as np
 import mysql.connector
 
-
-DB_CONFIG = {
-    "host": "localhost",
-    "user": "root",
-    "password": "041512",
-    "database": "grasp_bunny",
-}
+from db_config import DB_CONFIG
 
 
 def ndarray_to_blob(arr: np.ndarray) -> bytes:

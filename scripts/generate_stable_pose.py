@@ -7,13 +7,8 @@ import one.geom.surface as ogs
 import one.grasp.placement as ogp
 from one import ouc, osso
 
-
-DB_CONFIG = {
-    "host": "localhost",
-    "user": "root",
-    "password": "041512",
-    "database": "grasp_bunny",
-}
+from db_config import DB_CONFIG
+from paths import BUNNY_MESH_PATH
 
 
 def ndarray_to_blob(arr: np.ndarray) -> bytes:
@@ -36,7 +31,7 @@ def main():
 
     # bunny読み込み
     bunny = osso.SceneObject.from_file(
-        "bunny.stl",
+        str(BUNNY_MESH_PATH),
         collision_type=ouc.CollisionType.MESH,
     )
 

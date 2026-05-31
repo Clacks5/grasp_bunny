@@ -5,13 +5,8 @@ import mysql.connector
 from one import ouc, osso, or_2fg7, oum
 from one.grasp.antipodal import antipodal
 
-
-DB_CONFIG = {
-    "host": "localhost",
-    "user": "root",
-    "password": "041512",
-    "database": "grasp_bunny",
-}
+from db_config import DB_CONFIG
+from paths import BUNNY_MESH_PATH
 
 
 def ndarray_to_blob(arr: np.ndarray) -> bytes:
@@ -51,7 +46,7 @@ def main():
     stable_rotmat = blob_to_ndarray(rot_blob)
 
     bunny = osso.SceneObject.from_file(
-        "bunny.stl",
+        str(BUNNY_MESH_PATH),
         collision_type=ouc.CollisionType.MESH,
     )
 

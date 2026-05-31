@@ -8,13 +8,8 @@ from one import (
     khi_rs007l, or_2fg7
 )
 
-
-DB_CONFIG = {
-    "host": "localhost",
-    "user": "root",
-    "password": "041512",
-    "database": "grasp_bunny",
-}
+from db_config import DB_CONFIG
+from paths import BUNNY_MESH_PATH
 
 
 def blob_to_ndarray(blob):
@@ -107,7 +102,7 @@ def main():
     ground.attach_to(base.scene)
 
     bunny = osso.SceneObject.from_file(
-        "bunny.stl",
+        str(BUNNY_MESH_PATH),
         collision_type=ouc.CollisionType.MESH,
     )
     bunny.rgb = (0.8, 0.7, 0.6)
